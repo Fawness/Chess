@@ -29,6 +29,18 @@ class ChessGame {
                     "Keep practicing and you'll get even better!",
                     "I'm impressed with your improvement!"
                 ],
+                aiGeneral: [
+                    "My turn! Let me show you a good move.",
+                    "I'll try to make a strong move here.",
+                    "Let me develop my pieces properly.",
+                    "I'm thinking about my next move.",
+                    "This should be an interesting position.",
+                    "I'll try to control the center.",
+                    "Let me protect my pieces.",
+                    "I'm planning my strategy.",
+                    "This move should help my position.",
+                    "I'll try to create some threats."
+                ],
                 captures: {
                     low: [
                         "Good capture! Taking pawns helps control the center.",
@@ -43,11 +55,31 @@ class ChessGame {
                         "That's a brilliant capture! Well done!"
                     ]
                 },
+                aiCaptures: {
+                    low: [
+                        "I captured your pawn! That helps me control the center.",
+                        "Taking your pawn gives me better position.",
+                        "I got your pawn! Every piece counts.",
+                        "That pawn capture helps my strategy."
+                    ],
+                    high: [
+                        "I captured your piece! That's a big advantage for me.",
+                        "Got your piece! That should help my position.",
+                        "I took your piece! This gives me the upper hand.",
+                        "That's a good capture for me!"
+                    ]
+                },
                 check: [
                     "Check! You're putting pressure on my king!",
                     "Good move! You're learning to attack!",
                     "Check! You're starting to think like a chess player!",
                     "Nice attack! You're getting aggressive!"
+                ],
+                aiCheck: [
+                    "Check! I'm putting pressure on your king!",
+                    "Check! You'll need to defend your king.",
+                    "Check! I'm attacking your king!",
+                    "Check! You need to get out of this!"
                 ],
                 gameOver: {
                     win: [
@@ -89,6 +121,18 @@ class ChessGame {
                     "Nice work! You're building a strong position.",
                     "You're getting better at spotting opportunities!"
                 ],
+                aiGeneral: [
+                    "My turn! I'll try to make a strong move.",
+                    "Let me think about the best move here.",
+                    "I'll try to improve my position.",
+                    "This should be an interesting move.",
+                    "Let me develop my pieces properly.",
+                    "I'm planning my strategy carefully.",
+                    "This move should help my position.",
+                    "I'll try to create some threats.",
+                    "Let me control the center.",
+                    "I'm thinking several moves ahead."
+                ],
                 captures: {
                     low: [
                         "Good capture! You're controlling the board well.",
@@ -103,11 +147,31 @@ class ChessGame {
                         "Outstanding! You're showing real chess skill!"
                     ]
                 },
+                aiCaptures: {
+                    low: [
+                        "I captured your pawn! That helps my position.",
+                        "Taking your pawn gives me better control.",
+                        "I got your pawn! Every piece counts.",
+                        "That pawn capture improves my position."
+                    ],
+                    high: [
+                        "I captured your piece! That's a big advantage.",
+                        "Got your piece! That should help me win.",
+                        "I took your piece! This gives me the upper hand.",
+                        "That's a good capture for my position!"
+                    ]
+                },
                 check: [
                     "Check! You're putting me under pressure!",
                     "Good attack! You're learning to be aggressive!",
                     "Check! You're developing your attacking skills!",
                     "Nice move! You're controlling the game!"
+                ],
+                aiCheck: [
+                    "Check! I'm putting you under pressure!",
+                    "Check! You'll need to defend carefully.",
+                    "Check! I'm attacking your king!",
+                    "Check! You need to get out of this!"
                 ],
                 gameOver: {
                     win: [
@@ -149,6 +213,18 @@ class ChessGame {
                     "You're making this slightly interesting, I'll give you that.",
                     "I'm starting to wonder if you actually know what you're doing."
                 ],
+                aiGeneral: [
+                    "My turn. Let me show you how it's done.",
+                    "I'll make a move that should impress you.",
+                    "Let me demonstrate proper chess.",
+                    "I'll try to make this interesting.",
+                    "My move should improve my position.",
+                    "Let me think about the best move.",
+                    "I'll make a strong move here.",
+                    "This should be a good move.",
+                    "Let me develop my pieces properly.",
+                    "I'll try to control the center."
+                ],
                 captures: {
                     low: [
                         "Taking a pawn? How... predictable.",
@@ -163,11 +239,31 @@ class ChessGame {
                         "Fine, you captured a piece. Big deal."
                     ]
                 },
+                aiCaptures: {
+                    low: [
+                        "I took your pawn. Don't act surprised.",
+                        "Your pawn is mine now. Deal with it.",
+                        "I captured your pawn. What did you expect?",
+                        "Your pawn is gone. Better luck next time."
+                    ],
+                    high: [
+                        "I captured your piece. That should hurt.",
+                        "Got your piece! Don't cry about it.",
+                        "I took your piece. You should have protected it.",
+                        "Your piece is mine now. Tough luck."
+                    ]
+                },
                 check: [
                     "Check? You're starting to get annoying.",
                     "Oh, you put me in check. How original.",
                     "Check. Whatever. I can handle it.",
                     "You think that's a good move? Think again."
+                ],
+                aiCheck: [
+                    "Check! You're in trouble now.",
+                    "Check! You'll need to defend that.",
+                    "Check! I'm putting pressure on you.",
+                    "Check! You better watch your king."
                 ],
                 gameOver: {
                     win: [
@@ -209,6 +305,18 @@ class ChessGame {
                     "Maybe you should stick to simpler games.",
                     "I'm beginning to question your intelligence."
                 ],
+                aiGeneral: [
+                    "My turn. Let me show you real chess.",
+                    "I'll make a move that should intimidate you.",
+                    "Let me demonstrate proper strategy.",
+                    "I'll try to make this educational for you.",
+                    "My move should improve my position.",
+                    "Let me think about the best move.",
+                    "I'll make a strong move here.",
+                    "This should be a good move.",
+                    "Let me develop my pieces properly.",
+                    "I'll try to control the center."
+                ],
                 captures: {
                     low: [
                         "You captured a pawn? How thrilling.",
@@ -223,11 +331,31 @@ class ChessGame {
                         "Fine, you captured something. Big deal."
                     ]
                 },
+                aiCaptures: {
+                    low: [
+                        "I took your pawn. Don't act surprised.",
+                        "Your pawn is mine now. Deal with it.",
+                        "I captured your pawn. What did you expect?",
+                        "Your pawn is gone. Better luck next time."
+                    ],
+                    high: [
+                        "I captured your piece. That should hurt.",
+                        "Got your piece! Don't cry about it.",
+                        "I took your piece. You should have protected it.",
+                        "Your piece is mine now. Tough luck."
+                    ]
+                },
                 check: [
                     "Check? You're starting to get on my nerves.",
                     "Oh, you put me in check. How clever.",
                     "Check. Whatever. I can handle anything you throw at me.",
                     "You think that's impressive? Think again."
+                ],
+                aiCheck: [
+                    "Check! You're in trouble now.",
+                    "Check! You'll need to defend that.",
+                    "Check! I'm putting pressure on you.",
+                    "Check! You better watch your king."
                 ],
                 gameOver: {
                     win: [
@@ -273,6 +401,18 @@ class ChessGame {
                     "You're not just bad at chess - you're bad at being bad at chess.",
                     "I'm starting to wonder if you know the rules at all."
                 ],
+                aiGeneral: [
+                    "My turn. Let me show you how real chess is played.",
+                    "I'll make a move that should humiliate you.",
+                    "Let me demonstrate proper chess strategy.",
+                    "I'll try to make this educational for you.",
+                    "My move should improve my position.",
+                    "Let me think about the best move.",
+                    "I'll make a strong move here.",
+                    "This should be a good move.",
+                    "Let me develop my pieces properly.",
+                    "I'll try to control the center."
+                ],
                 captures: {
                     low: [
                         "You captured a pawn? How... thrilling.",
@@ -287,11 +427,31 @@ class ChessGame {
                         "Fine, you captured something. Don't let it go to your head."
                     ]
                 },
+                aiCaptures: {
+                    low: [
+                        "I took your pawn. Don't act surprised.",
+                        "Your pawn is mine now. Deal with it.",
+                        "I captured your pawn. What did you expect?",
+                        "Your pawn is gone. Better luck next time."
+                    ],
+                    high: [
+                        "I captured your piece. That should hurt.",
+                        "Got your piece! Don't cry about it.",
+                        "I took your piece. You should have protected it.",
+                        "Your piece is mine now. Tough luck."
+                    ]
+                },
                 check: [
                     "Check? You're really starting to annoy me.",
                     "Oh, you put me in check. How original.",
                     "Check. Whatever. I can handle anything you do.",
                     "You think that's impressive? You're still terrible."
+                ],
+                aiCheck: [
+                    "Check! You're in trouble now.",
+                    "Check! You'll need to defend that.",
+                    "Check! I'm putting pressure on you.",
+                    "Check! You better watch your king."
                 ],
                 gameOver: {
                     win: [
@@ -759,7 +919,7 @@ class ChessGame {
         return false;
     }
 
-    makeMove(fromRow, fromCol, toRow, toCol) {
+    makeMove(fromRow, fromCol, toRow, toCol, isAIMove = false) {
         const fromPiece = this.board[fromRow][fromCol];
         const toPiece = this.board[toRow][toCol];
         const movingPlayer = this.currentPlayer;
@@ -828,19 +988,22 @@ class ChessGame {
         } else {
             console.log('Game continues, AI will move if it\'s black\'s turn');
             
-            // Check if the move put the opponent in check
-            const isCheck = this.isKingInCheck(nextPlayer);
-            
-            // Update dialogue based on the move
-            if (captureType) {
-                // Player captured a piece
-                this.updateCharacterDialogue('captures', captureType);
-            } else if (isCheck) {
-                // Player put opponent in check
-                this.updateCharacterDialogue('check');
-            } else {
-                // Regular move
-                this.updateCharacterDialogue('general');
+            // Only handle dialogue for player moves (not AI moves)
+            if (!isAIMove) {
+                // Check if the move put the opponent in check
+                const isCheck = this.isKingInCheck(nextPlayer);
+                
+                // Update dialogue based on the move
+                if (captureType) {
+                    // Player captured a piece
+                    this.updateCharacterDialogue('captures', captureType);
+                } else if (isCheck) {
+                    // Player put opponent in check
+                    this.updateCharacterDialogue('check');
+                } else {
+                    // Regular move
+                    this.updateCharacterDialogue('general');
+                }
             }
             
             // AI move if it's AI's turn
@@ -861,7 +1024,7 @@ class ChessGame {
                 captureType = pieceValue <= 1 ? 'low' : 'high';
             }
             
-            this.makeMove(move.from.row, move.from.col, move.to.row, move.to.col);
+            this.makeMove(move.from.row, move.from.col, move.to.row, move.to.col, true);
             
             // Update dialogue for AI move (delayed to show after the move)
             setTimeout(() => {
@@ -874,14 +1037,15 @@ class ChessGame {
                 const isCheck = this.isKingInCheck('white');
                 
                 if (captureType) {
-                    // AI captured a piece
-                    this.updateCharacterDialogue('captures', captureType);
+                    // AI captured a player piece - this should trigger different dialogue
+                    // The dialogue should reflect the AI's reaction to capturing the player's piece
+                    this.updateCharacterDialogue('aiCaptures', captureType);
                 } else if (isCheck) {
                     // AI put player in check
-                    this.updateCharacterDialogue('check');
+                    this.updateCharacterDialogue('aiCheck');
                 } else {
                     // Regular AI move
-                    this.updateCharacterDialogue('general');
+                    this.updateCharacterDialogue('aiGeneral');
                 }
             }, 600); // Slightly after the move animation
         }
@@ -1268,11 +1432,18 @@ class ChessGame {
         if (eventType === 'gameOver') {
             dialogueArray = dialogues.gameOver[subType]; // win, lose, or draw
         } else if (eventType === 'captures') {
-            dialogueArray = dialogues.captures[subType]; // low or high
+            dialogueArray = dialogues.captures[subType]; // low or high - player capturing AI pieces
+        } else if (eventType === 'aiCaptures') {
+            // AI capturing player pieces - use different dialogue
+            dialogueArray = dialogues.aiCaptures[subType]; // low or high
         } else if (eventType === 'check') {
-            dialogueArray = dialogues.check;
+            dialogueArray = dialogues.check; // player putting AI in check
+        } else if (eventType === 'aiCheck') {
+            dialogueArray = dialogues.aiCheck; // AI putting player in check
+        } else if (eventType === 'aiGeneral') {
+            dialogueArray = dialogues.aiGeneral; // AI general moves
         } else {
-            dialogueArray = dialogues.general;
+            dialogueArray = dialogues.general; // player general moves
         }
         
         const randomDialogue = dialogueArray[Math.floor(Math.random() * dialogueArray.length)];
