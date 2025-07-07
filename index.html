@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Chess Game</h1>
+            <div class="game-info">
+                <div class="turn-indicator">
+                    <span>Current Turn: </span>
+                    <span id="current-turn">White</span>
+                </div>
+                <div class="difficulty-selector">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="beginner">Beginner</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="chess-section">
+                <div class="board-container">
+                    <div id="chessboard" class="chessboard"></div>
+                    <div class="board-labels">
+                        <div class="file-labels">
+                            <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+                        </div>
+                        <div class="rank-labels">
+                            <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-controls">
+                    <button id="new-game-btn" class="btn">New Game</button>
+                    <button id="undo-btn" class="btn">Undo</button>
+                    <button id="flip-board-btn" class="btn">Flip Board</button>
+                </div>
+            </div>
+
+            <div class="character-section">
+                <div class="character-container">
+                    <div class="character-image">
+                        <img id="character-img" src="characters/beginner.png" alt="Character" />
+                    </div>
+                    <div class="dialogue-bubbles">
+                        <div id="dialogue-bubble-1" class="dialogue-bubble"></div>
+                        <div id="dialogue-bubble-2" class="dialogue-bubble"></div>
+                        <div id="dialogue-bubble-3" class="dialogue-bubble"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="game-status">
+            <div id="status-message" class="status-message">Game in progress</div>
+            <div id="captured-pieces" class="captured-pieces">
+                <div class="captured-white"></div>
+                <div class="captured-black"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chess.js"></script>
+</body>
+</html> 
