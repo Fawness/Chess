@@ -899,8 +899,6 @@ class ChessGame {
             }
         }
 
-        console.log(color, 'king is at position:', kingRow, kingCol);
-
         // Check if any opponent piece can attack the king
         for (let row = 0; row < 8; row++) {
             for (let col = 0; col < 8; col++) {
@@ -908,14 +906,12 @@ class ChessGame {
                 if (piece && piece.color !== color) {
                     const moves = this.getBasicMoves(row, col);
                     if (moves.some(move => move.row === kingRow && move.col === kingCol)) {
-                        console.log(color, 'is in check! Piece at', row, col, 'can attack king');
                         return true;
                     }
                 }
             }
         }
 
-        console.log(color, 'is not in check');
         return false;
     }
 
@@ -956,11 +952,6 @@ class ChessGame {
         const isCheckmate = this.isCheckmateForPlayer(nextPlayer);
         const isStalemate = this.isStalemateForPlayer(nextPlayer);
         
-        console.log('Move made by:', this.currentPlayer);
-        console.log('Next player would be:', nextPlayer);
-        console.log('Is checkmate for next player:', isCheckmate);
-        console.log('Is stalemate for next player:', isStalemate);
-
         // Switch players
         this.currentPlayer = nextPlayer;
 
@@ -972,7 +963,6 @@ class ChessGame {
 
         // Handle game end conditions and dialogue
         if (isCheckmate) {
-            console.log('GAME OVER - CHECKMATE!');
             this.gameOver = true;
             this.updateStatusMessage();
             
@@ -981,13 +971,10 @@ class ChessGame {
             const dialogueType = winner === 'white' ? 'win' : 'lose';
             this.updateCharacterDialogue('gameOver', dialogueType);
         } else if (isStalemate) {
-            console.log('GAME OVER - STALEMATE!');
             this.gameOver = true;
             this.updateStatusMessage();
             this.updateCharacterDialogue('gameOver', 'draw');
         } else {
-            console.log('Game continues, AI will move if it\'s black\'s turn');
-            
             // Only handle dialogue for player moves (not AI moves)
             if (!isAIMove) {
                 // Check if the move put the opponent in check
@@ -1029,7 +1016,6 @@ class ChessGame {
             // Update dialogue for AI move (delayed to show after the move)
             setTimeout(() => {
                 if (this.gameOver) {
-                    // Game ended, dialogue already handled in makeMove
                     return;
                 }
                 
@@ -1223,13 +1209,9 @@ class ChessGame {
     }
 
     isCheckmateForPlayer(color) {
-        console.log('Checking if', color, 'is in checkmate...');
         if (!this.isKingInCheck(color)) {
-            console.log(color, 'is not in check, so not checkmate');
             return false;
         }
-        
-        console.log(color, 'is in check, checking for escape moves...');
         
         // Check if any move can get out of check
         for (let row = 0; row < 8; row++) {
@@ -1255,14 +1237,12 @@ class ChessGame {
                     });
                     
                     if (escapeMoves.length > 0) {
-                        console.log('Found escape move for', color, 'at', row, col, 'with', escapeMoves.length, 'moves');
                         return false;
                     }
                 }
             }
         }
         
-        console.log(color, 'is in checkmate! No escape moves found.');
         return true;
     }
 
@@ -1301,7 +1281,6 @@ class ChessGame {
     }
 
     newGame() {
-        console.log('Starting new game...');
         this.board = this.initializeBoard();
         this.currentPlayer = 'white';
         this.selectedPiece = null;
@@ -1321,13 +1300,10 @@ class ChessGame {
         this.updateStatusMessage();
         this.updateCapturedPieces();
         this.updateCharacterDialogue('general');
-        console.log('New game started successfully');
     }
 
     undoMove() {
-        console.log('Attempting to undo move...');
         if (this.moveHistory.length === 0) {
-            console.log('No moves to undo');
             return;
         }
         
@@ -1350,14 +1326,11 @@ class ChessGame {
         this.updateTurnIndicator();
         this.updateStatusMessage();
         this.updateCapturedPieces();
-        console.log('Move undone successfully');
     }
 
     flipBoard() {
-        console.log('Flipping board...');
         this.boardFlipped = !this.boardFlipped;
         this.renderBoard();
-        console.log('Board flipped successfully');
     }
 
     updateTurnIndicator() {
